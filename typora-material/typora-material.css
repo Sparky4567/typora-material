@@ -1,0 +1,291 @@
+:root {
+    /* Material 3 Dark Palette */
+    --md-sys-color-primary: #D0BCFF;
+    --md-sys-color-on-primary: #381E72;
+    --md-sys-color-primary-container: #4F378B;
+    --md-sys-color-on-primary-container: #EADDFF;
+    --md-sys-color-secondary: #CCC2DC;
+    --md-sys-color-on-secondary: #332D41;
+    --md-sys-color-secondary-container: #4A4458;
+    --md-sys-color-on-secondary-container: #E8DEF8;
+    --md-sys-color-tertiary: #EFB8C8;
+    --md-sys-color-on-tertiary: #492532;
+    --md-sys-color-tertiary-container: #633B48;
+    --md-sys-color-on-tertiary-container: #FFD8E4;
+    --md-sys-color-error: #F2B8B5;
+    --md-sys-color-on-error: #601410;
+    --md-sys-color-error-container: #8C1D18;
+    --md-sys-color-on-error-container: #F9DEDC;
+    --md-sys-color-background: #1C1B1F;
+    --md-sys-color-on-background: #E6E1E5;
+    --md-sys-color-surface: #1C1B1F;
+    --md-sys-color-on-surface: #E6E1E5;
+    --md-sys-color-surface-variant: #49454F;
+    --md-sys-color-on-surface-variant: #CAC4D0;
+    --md-sys-color-outline: #938F99;
+    --md-sys-color-outline-variant: #444746;
+    --md-sys-color-inverse-surface: #E6E1E5;
+    --md-sys-color-inverse-on-surface: #313033;
+    --md-sys-color-inverse-primary: #6750A4;
+    --md-sys-color-surface-container-lowest: #0F0E11;
+    --md-sys-color-surface-container-low: #1D1B20;
+    --md-sys-color-surface-container: #211F26;
+    --md-sys-color-surface-container-high: #2B2930;
+    --md-sys-color-surface-container-highest: #36343B;
+
+    /* Typora Core Overrides - Ensuring Global Dark Theme */
+    --bg-color: var(--md-sys-color-surface);
+    --text-color: var(--md-sys-color-on-surface);
+    --side-bar-bg-color: var(--md-sys-color-surface-container-lowest);
+    --item-hover-bg-color: var(--md-sys-color-surface-container-high);
+    --item-hover-text-color: var(--md-sys-color-primary);
+    --select-text-bg-color: var(--md-sys-color-primary-container);
+    --select-text-font-color: var(--md-sys-color-on-primary-container);
+    --window-border-color: var(--md-sys-color-outline-variant);
+    --active-file-bg-color: var(--md-sys-color-secondary-container);
+    --active-file-text-color: var(--md-sys-color-on-secondary-container);
+    --control-text-color: var(--md-sys-color-on-surface-variant);
+    --control-text-hover-color: var(--md-sys-color-primary);
+    --primary-color: var(--md-sys-color-primary);
+    --window-border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    -webkit-font-smoothing: antialiased;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--md-sys-color-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Links */
+a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+a:hover {
+    border-bottom-color: var(--md-sys-color-primary);
+}
+
+/* Lists */
+ul,
+ol {
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Floating Cards for Code Blocks, Blockquotes, Tables */
+.md-fences,
+blockquote,
+table {
+    background-color: var(--md-sys-color-surface-container-high) !important;
+    border-radius: 28px !important;
+    padding: 20px !important;
+    margin: 2rem 0 !important;
+    border: none !important;
+    /* M3 Elevation Level 3 */
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Metadata (Frontmatter) - Darkened */
+pre.md-meta-block,
+#ty-frontmatter {
+    background-color: var(--md-sys-color-surface-container-low) !important;
+    border-radius: 28px !important;
+    padding: 20px !important;
+    margin: 0 0 2rem 0 !important;
+    border: none !important;
+    /* M3 Elevation Level 1 */
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+blockquote {
+    border-left: 8px solid var(--md-sys-color-primary) !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    color: var(--md-sys-color-on-surface-variant);
+    font-style: italic;
+}
+
+.md-fences {
+    font-family: 'Fira Code', 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-primary);
+    text-align: left;
+    font-weight: 500;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Metadata text styling refinement */
+pre.md-meta-block .md-meta,
+#ty-frontmatter .md-meta {
+    color: var(--md-sys-color-secondary);
+    font-weight: 500;
+}
+
+/* Sidebar Styling */
+.sidebar-content {
+    background-color: var(--md-sys-color-surface-container-lowest);
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-title {
+    color: var(--md-sys-color-primary);
+}
+
+.file-node-active .file-node-content {
+    background-color: var(--md-sys-color-secondary-container);
+    border-radius: 16px;
+}
+
+/* Preferences & UI Overlays - Darkened to Lowest */
+.megamenu-content,
+.megamenu-menu,
+.uni-preference-panel,
+#ty-preferences,
+.modal-content,
+.popover,
+.dropdown-menu {
+    background-color: var(--md-sys-color-surface-container-lowest) !important;
+    color: var(--md-sys-color-on-surface) !important;
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+}
+
+/* Fix for preferences section backgrounds */
+.megamenu-menu-panel,
+.megamenu-menu-section,
+.uni-preference-panel webview {
+    background-color: transparent !important;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    opacity: 1 !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--md-sys-color-surface-container-highest);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--md-sys-color-outline);
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+input,
+select,
+button {
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+button {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Quick Open */
+#ty-quick-open {
+    background-color: var(--md-sys-color-surface-container-high);
+    border-radius: 28px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.ty-quick-open-item.active {
+    background-color: var(--md-sys-color-primary-container) !important;
+    color: var(--md-sys-color-on-primary-container) !important;
+}
